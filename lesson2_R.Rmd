@@ -1,0 +1,38 @@
+---
+title: "HelloWorld"
+output: html_document
+time: 2020年9月10日19:10:21
+author: Li-Yuan
+---
+
+```{}
+
+ls() #show the variable of environment
+rm(list=ls()) #rm all variables of environment
+
+1:10 * 10 #vectoriation
+
+fun <- function(arg1){
+  print(arg1 + 1 )
+}
+
+#combine
+Forecast_List <- c(28, 27, 28, 26, 27)
+
+#loop each element in Forecast_List
+for(single in Forecast_List){
+  print(single)
+}
+
+for (Daily_T in Forecast_List) {
+  for (Hour in 1:24) {
+    Hourly_T <- rnorm(1,Daily_T,5)
+    print(paste(Daily_T,Hourly_T))
+  }
+}
+#matrix
+Output_Matrix    <- matrix(nrow=5, ncol=24)
+
+Output_Matrix2 <- as.vector(Output_Matrix)
+Output_Matrix2
+```
